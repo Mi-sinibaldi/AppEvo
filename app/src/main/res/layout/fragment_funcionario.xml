@@ -16,7 +16,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0"
             android:layout_marginTop="4dp" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/recyclerView">
+            app:layout_constraintBottom_toTopOf="@+id/recyclerViewDepto">
 
         <TextView
                 android:id="@+id/TextViewSubFuncionario"
@@ -67,6 +67,6 @@
             android:layout_width="395dp"
             android:layout_height="433dp"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            android:id="@+id/recyclerView" app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/recyclerViewDepto" app:layout_constraintBottom_toBottomOf="parent"
     />
 </android.support.constraint.ConstraintLayout>

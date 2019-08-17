@@ -11,4 +11,9 @@
     <string name="sair">Sair</string>
     <string name="title_activity_adapter_depto">AdapterDepto</string>
     <string name="sigla">Sigla</string>
+    <string name="novo_departamento">Novo Departamento</string>
+    <string name="nome">Nome:</string>
+    <string name="salvar">Salvar</string>
+    <string name="cancelar">Cancelar</string>
+
 </resources>

@@ -16,7 +16,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintBottom_toTopOf="@+id/recyclerViewDepto" app:layout_constraintVertical_bias="0.105">
+            app:layout_constraintBottom_toTopOf="@+id/recyclerViewFunc" app:layout_constraintVertical_bias="0.0">
 
         <TextView
                 android:id="@+id/TextViewSubFuncionario"
@@ -27,7 +27,7 @@
                 android:textSize="12sp"
                 android:text="Cadastro de novos Departamentos"
                 android:textColor="#FFFFFF"
-                android:layout_marginBottom="48dp" app:layout_constraintBottom_toTopOf="@+id/buttonAddDpto"
+                android:layout_marginBottom="48dp" app:layout_constraintBottom_toTopOf="@+id/buttonAddDepto"
                 android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -54,17 +54,23 @@
                 android:layout_width="290dp"
                 android:textAllCaps="false"
                 android:layout_height="46dp"
-                android:id="@+id/buttonAddDpto" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                android:id="@+id/buttonAddDepto" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
                 app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
                 android:textColor="#FFFFFF" app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="16dp"/>
 
     </android.support.constraint.ConstraintLayout>
     <android.support.v7.widget.RecyclerView
-            android:layout_width="406dp"
-            android:layout_height="446dp"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            android:id="@+id/recyclerViewDepto" app:layout_constraintBottom_toBottomOf="parent"
-    />
+            android:layout_width="0dp"
+            android:layout_height="391dp"
+            tools:listitem="@layout/activity_adapter_depto2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/recyclerViewFunc"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"/>
 
 </android.support.constraint.ConstraintLayout>

@@ -1,6 +1,6 @@
 package com.example.appevo.model
 
-class DepartamentoModel (
+public class Departamento (
 
     val id: Int,
     val nome: String,

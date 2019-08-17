@@ -3,29 +3,33 @@ package com.example.appevo
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
-import android.widget.TextView
 import com.example.appevo.fragments.departamento.DeptoFragment
+import com.example.appevo.fragments.departamento.UpdateDeptoFragment
+import com.example.appevo.fragments.funcionario.FuncionarioFragment
+
 
 class MainActivity : AppCompatActivity() {
-
-    private lateinit var textMessage: TextView
 
     private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.navigation_home -> {
                 val fragment = DeptoFragment()
-                fragment.arguments = intent.extras
+                //fragment.arguments = intent.extras
                 val transaction = supportFragmentManager.beginTransaction()
-                transaction.add(R.id.frameLayout,fragment)
+                transaction.replace(R.id.frameLayout,fragment)
                 transaction.commit()
             }
             R.id.navigation_dashboard -> {
-                textMessage.setText(R.string.title_dashboard)
-                return@OnNavigationItemSelectedListener true
+
+                val fragment = FuncionarioFragment()
+                //fragment.arguments = intent.extras
+                val transaction = supportFragmentManager.beginTransaction()
+                transaction.replace(R.id.frameLayout,fragment)
+                transaction.commit()
             }
             R.id.navigation_notifications -> {
-                textMessage.setText(R.string.title_notifications)
-                return@OnNavigationItemSelectedListener true
+
+
             }
         }
         false
@@ -36,7 +40,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
-        //textMessage = findViewById(R.id.message)
+        val fragment = DeptoFragment()
+        //fragment.arguments = intent.extras
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.frameLayout,fragment)
+        transaction.commit()
+
+//        //textMessage = findViewById(R.id.message)
         navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
+
     }
 }

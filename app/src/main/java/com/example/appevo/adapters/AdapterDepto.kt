@@ -6,11 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.appevo.R
+import com.example.appevo.model.Departamento
 import kotlinx.android.synthetic.main.activity_adapter_depto2.view.*
 
 
-class AdapterDepto(private val deptoList: List<AdapterDepto>,
+class AdapterDepto(private val deptoList: List<Departamento>,
                    private val context: Context) : RecyclerView.Adapter<AdapterDepto.ViewHolder>() {
+
+
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

@@ -1,8 +1,14 @@
 package com.example.appevo.model
 
-public class Departamento (
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
-    val id: Int,
+@Entity
+class Departamento (
+
+    @PrimaryKey(autoGenerate = true)
+    val id: Int = 0,
+
     val nome: String,
     val sigla: String
 )

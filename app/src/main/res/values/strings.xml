@@ -15,5 +15,10 @@
     <string name="nome">Nome:</string>
     <string name="salvar">Salvar</string>
     <string name="cancelar">Cancelar</string>
+    <string name="ok">OK</string>
+    <string name="tem_certeza_que_deseja_sair">Tem certeza que deseja sair?</string>
+    <string name="sim">SIM</string>
+    <string name="n_o">NÃO</string>
+    <string name="sucesso">Sucesso</string>
 
 </resources>

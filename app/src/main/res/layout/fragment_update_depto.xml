@@ -7,74 +7,88 @@
         tools:context=".fragments.departamento.UpdateDeptoFragment"
         android:background="@color/colorPrimary">
 
-    <TextView
-            android:text="@string/novo_departamento"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textViewFuncionario"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp"
-            android:textColor="#FFFFFF"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="36dp" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/editTextNome" app:layout_constraintVertical_bias="0.06"/>
 
-    <EditText
-            android:layout_width="0dp"
-            android:layout_height="67dp"
-            android:inputType="textPersonName"
-            android:hint="@string/nome"
-            android:textColorHint="@color/colorWhite"
-            android:ems="10"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp"
-            android:id="@+id/editTextNome" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            android:layout_marginBottom="72dp" app:layout_constraintBottom_toTopOf="@+id/editTextRg"
-            app:layout_constraintHorizontal_bias="0.4"/>
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
 
-    <EditText
-            android:layout_width="0dp"
-            android:layout_height="67dp"
-            android:inputType="textPersonName"
-            android:hint="Sigla:"
-            android:textColorHint="@color/colorWhite"
-            android:ems="10"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp"
-            android:id="@+id/editTextRg" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0" android:textColor="#FFFFFF"
-            android:layout_marginBottom="60dp" app:layout_constraintBottom_toTopOf="@+id/buttonSalvar"/>
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-    <Button
-            android:text="@string/salvar"
-            android:layout_width="192dp"
-            android:layout_height="51dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:id="@+id/buttonSalvar"
-            android:background="@drawable/button_customized_depto"
-            app:layout_constraintHorizontal_bias="0.497"
-            android:textColor="#FFFFFF"
-            android:textAllCaps="false" app:layout_constraintBottom_toTopOf="@+id/buttonCancelar"
-            android:layout_marginBottom="28dp"/>
+            <TextView
+                    android:text="@string/novo_departamento"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewFuncionario"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="36dp" android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toTopOf="@+id/editTextNome" app:layout_constraintVertical_bias="0.06"/>
 
-    <Button
-            android:text="Cancelar"
-            android:layout_width="192dp"
-            android:layout_height="51dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:id="@+id/buttonCancelar"
-            android:background="@drawable/button_customized_depto"
-            android:layout_marginBottom="96dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            android:textColor="#FFFFFF"
-            android:textAllCaps="false"/>
+            <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="67dp"
+                    android:inputType="textPersonName"
+                    android:hint="@string/nome"
+                    android:textColorHint="@color/colorWhite"
+                    android:ems="10"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp"
+                    android:id="@+id/editTextNome" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="72dp" app:layout_constraintBottom_toTopOf="@+id/editTextRg"
+                    app:layout_constraintHorizontal_bias="0.4" android:textColor="#FFFFFF"/>
 
+            <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="67dp"
+                    android:inputType="textPersonName"
+                    android:hint="Sigla:"
+                    android:textColorHint="@color/colorWhite"
+                    android:ems="10"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp"
+                    android:id="@+id/editTextRg" android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0" android:textColor="#FFFFFF"
+                    android:layout_marginBottom="60dp" app:layout_constraintBottom_toTopOf="@+id/buttonSalvar"/>
+
+            <Button
+                    android:text="@string/salvar"
+                    android:layout_width="192dp"
+                    android:layout_height="51dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:id="@+id/buttonSalvar"
+                    android:background="@drawable/button_customized_depto"
+                    app:layout_constraintHorizontal_bias="0.497"
+                    android:textColor="#FFFFFF"
+                    android:textAllCaps="false" app:layout_constraintBottom_toTopOf="@+id/buttonCancelar"
+                    android:layout_marginBottom="28dp"/>
+
+            <Button
+                    android:text="Cancelar"
+                    android:layout_width="192dp"
+                    android:layout_height="51dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:id="@+id/buttonCancelar"
+                    android:background="@drawable/button_customized_depto"
+                    android:layout_marginBottom="96dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.497"
+                    android:textColor="#FFFFFF"
+                    android:textAllCaps="false"/>
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
                 transaction.replace(R.id.frameLayout,fragment)
                 transaction.commit()
             }
-            R.id.navigation_dashboard -> {
+            R.id.nav_funcionario -> {
 
                 val fragment = FuncionarioFragment()
                 //fragment.arguments = intent.extras
@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
                 transaction.replace(R.id.frameLayout,fragment)
                 transaction.commit()
             }
-            R.id.navigation_notifications -> {
+            R.id.nav_close -> {
 
 
             }

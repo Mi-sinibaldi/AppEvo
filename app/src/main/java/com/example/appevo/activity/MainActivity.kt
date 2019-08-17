@@ -1,10 +1,10 @@
-package com.example.appevo
+package com.example.appevo.activity
 
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
+import com.example.appevo.R
 import com.example.appevo.fragments.departamento.DeptoFragment
-import com.example.appevo.fragments.departamento.UpdateDeptoFragment
 import com.example.appevo.fragments.funcionario.FuncionarioFragment
 
 

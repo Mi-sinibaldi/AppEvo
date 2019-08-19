@@ -1,11 +1,11 @@
-package com.example.appevo.activity
+package com.example.appevo.ui.activity
 
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
 import com.example.appevo.R
-import com.example.appevo.fragments.departamento.DeptoFragment
-import com.example.appevo.fragments.funcionario.FuncionarioFragment
+import com.example.appevo.ui.fragments.departamento.DeptoFragment
+import com.example.appevo.ui.fragments.funcionario.FuncionarioFragment
 
 
 class MainActivity : AppCompatActivity() {

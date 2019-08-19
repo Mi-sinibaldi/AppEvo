@@ -1,4 +1,4 @@
-package com.example.appevo.adapters
+package com.example.appevo.ui.adapters
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
@@ -28,8 +28,7 @@ class AdapterDepto(private val deptoList: List<Departamento>,
 
     override fun onBindViewHolder(p0: ViewHolder, p1: Int) {
         val depto = deptoList[p1]
-        p0.nome.text
-        p0.sigla.text
+        p0.bind(depto)
     }
 
 
@@ -38,6 +37,10 @@ class AdapterDepto(private val deptoList: List<Departamento>,
         val nome = itemView.textViewAdapterDepto
         val sigla = itemView.textViewAdapterSigla
 
+    fun bind(departamento: Departamento){
+        nome.text = departamento.nome
+        sigla.text = departamento.sigla
+    }
 
 
     }

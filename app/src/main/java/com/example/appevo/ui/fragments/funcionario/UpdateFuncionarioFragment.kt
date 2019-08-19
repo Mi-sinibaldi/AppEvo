@@ -1,4 +1,4 @@
-package com.example.appevo.fragments.funcionario
+package com.example.appevo.ui.fragments.funcionario
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -6,8 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.appevo.R
-import com.example.appevo.fragments.departamento.DeptoFragment
-import kotlinx.android.synthetic.main.fragment_update_depto.view.*
 import kotlinx.android.synthetic.main.fragment_update_funcionario.view.*
 
 

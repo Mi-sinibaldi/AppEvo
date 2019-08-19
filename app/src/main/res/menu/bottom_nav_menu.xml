@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
         android:id="@+id/navigation_home"
+        android:enabled="true"
         android:icon="@drawable/ic_departamento_center_black_24dp"
-        android:title="@string/departamento" />
+        android:title="@string/departamento"
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/nav_funcionario"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
         android:icon="@drawable/ic_person_black_24dp"
         android:title="@string/funcion_rio" />
 
     <item
         android:id="@+id/nav_close"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
         android:icon="@drawable/ic_highlight_off_black_24dp"
         android:title="@string/sair" />
 

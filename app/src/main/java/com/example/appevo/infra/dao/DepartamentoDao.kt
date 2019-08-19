@@ -1,22 +1,22 @@
 package com.example.appevo.infra.dao
 
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Query
-import androidx.room.Update
+
+
+import android.arch.persistence.room.*
 import com.example.appevo.model.Departamento
 
+@Dao
 interface DepartamentoDao {
 
     @Query("SELECT * FROM departamento")
-    abstract fun getAll(): List<Departamento>
+     fun getAll(): List<Departamento>
 
     @Insert
-    abstract fun insert(departamento: Departamento)
+     fun insert(departamento: Departamento)
 
     @Delete
-    abstract fun delete(departamento: Departamento)
+     fun delete(departamento: Departamento)
 
     @Update
-    abstract fun update(departamento: Departamento)
+     fun update(departamento: Departamento)
 }

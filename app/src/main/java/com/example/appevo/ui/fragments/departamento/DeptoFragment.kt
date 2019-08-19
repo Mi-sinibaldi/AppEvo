@@ -1,7 +1,10 @@
-package com.example.appevo.fragments.departamento
+package com.example.appevo.ui.fragments.departamento
 
+import android.arch.persistence.room.Room
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
+import android.provider.AlarmClock.EXTRA_MESSAGE
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
@@ -9,14 +12,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.appevo.R
-import com.example.appevo.adapters.AdapterDepto
+import com.example.appevo.infra.AppDatabase
+import com.example.appevo.infra.dao.DepartamentoDao
+import com.example.appevo.ui.adapters.AdapterDepto
 import com.example.appevo.model.Departamento
+import com.example.appevo.ui.activity.DepartamentoImputActivity
 import kotlinx.android.synthetic.main.fragment_depto.view.*
 
 class DeptoFragment : Fragment() {
 
 
     lateinit var adapterDepto: AdapterDepto
+    private lateinit var departamentoDao: DepartamentoDao
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,42 +32,29 @@ class DeptoFragment : Fragment() {
         val view: View = inflater!!.inflate(R.layout.fragment_depto, container, false)
 
         val activity = activity as Context
+
+        val database = Room.databaseBuilder(
+            activity,
+            AppDatabase::class.java,
+            "evo-app-database")
+            .allowMainThreadQueries()
+            .build()
+
+        departamentoDao = database.departamentoDao()
         val recyclerViewDepto = view.findViewById<RecyclerView>(R.id.recyclerViewFunc)
 
         recyclerViewDepto.layoutManager = LinearLayoutManager(activity)
         recyclerViewDepto.adapter = AdapterDepto(listaDeDeptos(), activity)
 
-        view.buttonAddDepto.setOnClickListener { view ->
-            //Log.d("btnSetup", "Selected")
-            val updateDeptoFragment = UpdateDeptoFragment()
-            replaceFragment(updateDeptoFragment)
+        view.buttonAddDepto.setOnClickListener {
+            val intent = Intent (getActivity(), DepartamentoImputActivity::class.java)
+            getActivity()?.startActivity(intent)
         }
-
-        // Return the fragment view/layout
         return view
     }
 
-
-    fun replaceFragment(fragment: Fragment) {
-        fragmentManager!!.beginTransaction()
-            .replace(R.id.frameLayout, fragment)
-            .addToBackStack(null)
-            .commit()
-    }
-
-
     private fun listaDeDeptos(): List<Departamento> {
-        return listOf(
-            Departamento(1, "Tecnologia da Informação", "T.I"),
-            Departamento(2, "Departamento Pessoal", "DP"),
-            Departamento(3, "Recursos humanos", "RH"),
-            Departamento(4, "Marketing", "Mkt"),
-            Departamento(5, "Financeiro", "FI"),
-            Departamento(6, "Vendas", "Vendas"),
-            Departamento(7, "Compras", "Compras"),
-            Departamento(8, "Diretoria", "Diretoria")
-        )
-
+        return  departamentoDao.getAll()
     }
 
 }

@@ -1,4 +1,4 @@
-package com.example.appevo.fragments.funcionario
+package com.example.appevo.ui.fragments.funcionario
 
 
 import android.content.Context
@@ -11,8 +11,8 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.example.appevo.R
-import com.example.appevo.adapters.AdapterFunc
 import com.example.appevo.model.Departamento
+import com.example.appevo.ui.adapters.AdapterFunc
 import com.example.appevo.model.Funcionario
 import kotlinx.android.synthetic.main.fragment_funcionario.view.*
 
@@ -49,7 +49,7 @@ class FuncionarioFragment : Fragment() {
     private fun listaFunc(): List<Funcionario> {
         val resut : MutableList<Funcionario>  = mutableListOf<Funcionario>()
         for (x in 0 until 30 step 1){
-            resut.add(x, Funcionario(x,"Funcionario  - $x",x,Departamento(x, "Deparatamento - $x","DPTO - $x")))
+            resut.add(x, Funcionario(x,"Funcionario  - $x",x,"", Departamento(x, "Deparatamento - $x","DPTO - $x")))
         }
 
         return resut

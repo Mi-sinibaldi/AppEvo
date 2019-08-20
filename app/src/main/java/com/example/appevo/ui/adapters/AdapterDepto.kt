@@ -10,10 +10,9 @@ import com.example.appevo.model.Departamento
 import kotlinx.android.synthetic.main.activity_adapter_depto2.view.*
 
 
-class AdapterDepto(private val deptoList: List<Departamento>,
-                   private val context: Context) : RecyclerView.Adapter<AdapterDepto.ViewHolder>() {
-
-
+class AdapterDepto(
+    private val deptoList: List<Departamento>,
+    private val context: Context) : RecyclerView.Adapter<AdapterDepto.ViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -37,12 +36,9 @@ class AdapterDepto(private val deptoList: List<Departamento>,
         val nome = itemView.textViewAdapterDepto
         val sigla = itemView.textViewAdapterSigla
 
-    fun bind(departamento: Departamento){
-        nome.text = departamento.nome
-        sigla.text = departamento.sigla
+        fun bind(departamento: Departamento) {
+            nome.text = departamento.nome
+            sigla.text = departamento.sigla
+        }
     }
-
-
-    }
-
 }

@@ -10,7 +10,16 @@
             android:screenOrientation="portrait"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".ui.activity.DepartamentoImputActivity">
+        <activity android:name=".ui.activity.FuncionarioUpdateActivity">
+        </activity>
+        <activity
+                android:name=".ui.activity.DepartamentoUpdateActivity"
+                android:label="@string/title_activity_departamento_update"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".ui.activity.FuncionarioInputActivity">
+        </activity>
+        <activity android:name=".ui.activity.DepartamentoInputActivity">
         </activity>
         <activity
                 android:name=".ui.adapters.AdapterFunc"

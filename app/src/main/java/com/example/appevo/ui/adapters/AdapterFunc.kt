@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import com.example.appevo.R
 import com.example.appevo.model.Funcionario
 import kotlinx.android.synthetic.main.activity_adapter_func.view.*
+import kotlinx.android.synthetic.main.activity_funcionario_input.view.*
 
 class AdapterFunc(
     private val listFunc: List<Funcionario>,
@@ -24,17 +25,19 @@ class AdapterFunc(
 
     override fun onBindViewHolder(p0: ViewHolder, p1: Int) {
         val func = listFunc[p1]
-        p0.nomeFunc.text
-        p0.rgFunc.text
-        p0.deptoFunc.text
-
+        p0.bind(func)
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        val nomeFunc = itemView.textViewNomeAdapterFunc
-        val rgFunc = itemView.textViewRgAdapter
+        val nomeFunc = itemView.editTextNomeFuncUp
+        val rgFunc = itemView.editTextRgFuncUp
         val deptoFunc = itemView.textViewDeptoAdapter
-    }
 
+        fun bind (funcionario: Funcionario){
+            nomeFunc.setText(funcionario.nomeFunc)
+            rgFunc.setText(funcionario.rg)
+            //deptoFunc.text = funcionario.departamento.toString()
+        }
+    }
 }

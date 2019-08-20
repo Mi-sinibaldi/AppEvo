@@ -1,10 +1,9 @@
-package com.example.appevo.ui.fragments.departamento
+package com.example.appevo.ui.fragments
 
 import android.arch.persistence.room.Room
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.provider.AlarmClock.EXTRA_MESSAGE
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
@@ -16,7 +15,7 @@ import com.example.appevo.infra.AppDatabase
 import com.example.appevo.infra.dao.DepartamentoDao
 import com.example.appevo.ui.adapters.AdapterDepto
 import com.example.appevo.model.Departamento
-import com.example.appevo.ui.activity.DepartamentoImputActivity
+import com.example.appevo.ui.activity.DepartamentoInputActivity
 import kotlinx.android.synthetic.main.fragment_depto.view.*
 
 class DeptoFragment : Fragment() {
@@ -46,8 +45,8 @@ class DeptoFragment : Fragment() {
         recyclerViewDepto.layoutManager = LinearLayoutManager(activity)
         recyclerViewDepto.adapter = AdapterDepto(listaDeDeptos(), activity)
 
-        view.buttonAddDepto.setOnClickListener {
-            val intent = Intent (getActivity(), DepartamentoImputActivity::class.java)
+        view.buttonAddFunc.setOnClickListener {
+            val intent = Intent (getActivity(), DepartamentoInputActivity::class.java)
             getActivity()?.startActivity(intent)
         }
         return view

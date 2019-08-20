@@ -6,13 +6,11 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="departamento">Departamento</string>
     <string name="funcion_rio">Funcionário</string>
     <string name="sair">Sair</string>
     <string name="title_activity_adapter_depto">AdapterDepto</string>
     <string name="sigla">Sigla</string>
     <string name="novo_departamento">Novo Departamento</string>
-    <string name="nome">Nome:</string>
     <string name="salvar">Salvar</string>
     <string name="cancelar">Cancelar</string>
     <string name="ok">OK</string>
@@ -20,5 +18,20 @@
     <string name="sim">SIM</string>
     <string name="n_o">NÃO</string>
     <string name="sucesso">Sucesso</string>
+    <string name="title_activity_departamento_update">DepartamentoUpdateActivity</string>
+    <string name="atualizar">Atualizar</string>
+    <string name="deletar">Deletar</string>
+    <string name="atualizar_departamento">Atualizar Departamento</string>
+    <string name="atualizar_funcion_rio">Atualizar Funcionário</string>
+    <string name="novo_funcion_rio">Novo Funcionário</string>
+    <string name="nome">Nome:</string>
+    <string name="rg">RG:</string>
+    <string name="add_novo_funcion_rio">+ Add novo Funcionário</string>
+    <string name="cadastro_de_novos_departamentos">Cadastro de novos Departamentos</string>
+    <string name="add_novo_departamento">+ Add novo departamento</string>
+    <string name="rg_funcionario">Rg funcionario</string>
+    <string name="departamento">Departamento</string>
+    <string name="cadastro_de_novos_funcion_rios">Cadastro de novos Funcionários</string>
+
 
 </resources>

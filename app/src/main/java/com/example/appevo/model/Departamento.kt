@@ -4,7 +4,7 @@ import android.arch.persistence.room.Entity
 import android.arch.persistence.room.PrimaryKey
 
 @Entity
-class Departamento (
+data class Departamento (
 
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,

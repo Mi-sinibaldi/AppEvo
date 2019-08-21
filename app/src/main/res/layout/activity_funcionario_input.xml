@@ -4,16 +4,18 @@
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent" android:layout_height="match_parent"
+        tools:context=".ui.activity.FuncionarioInputActivity"
         android:background="@color/colorPrimary">
 
     <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fillViewport="true">
+            android:fillViewport="true" android:layout_marginTop="16dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent">
 
         <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
             <TextView
                     android:text="@string/novo_funcion_rio"
@@ -21,44 +23,49 @@
                     android:textStyle="bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textViewFuncUp"
+                    android:id="@+id/TextViewNovoFuncionario"
                     app:layout_constraintEnd_toEndOf="parent"
                     android:layout_marginEnd="8dp"
                     app:layout_constraintStart_toStartOf="parent"
                     android:layout_marginStart="8dp"
                     android:textColor="#FFFFFF"
                     app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginTop="36dp" android:layout_marginBottom="8dp"
-                    app:layout_constraintBottom_toTopOf="@+id/editTextNomeFuncUp" app:layout_constraintVertical_bias="0.009"
-                    app:layout_constraintHorizontal_bias="0.51"/>
+                    android:layout_marginTop="36dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toTopOf="@+id/editTextNomeFuncionario"
+                    app:layout_constraintVertical_bias="0.0"/>
 
             <EditText
                     android:layout_width="0dp"
                     android:layout_height="67dp"
-                    android:inputType="textPersonName"
+                    android:inputType="textPersonName|textCapSentences"
                     android:hint="@string/nome"
                     android:textColorHint="@color/colorWhite"
                     android:ems="10"
                     app:layout_constraintStart_toStartOf="parent"
                     android:layout_marginStart="8dp"
-                    android:id="@+id/editTextNomeFuncUp" app:layout_constraintEnd_toEndOf="parent"
+                    android:id="@+id/editTextNomeFuncionario"
+                    app:layout_constraintEnd_toEndOf="parent"
                     android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="24dp" app:layout_constraintBottom_toTopOf="@+id/editTextRgFuncUp"
-                    app:layout_constraintHorizontal_bias="1.0" android:textColor="#FFFFFF"/>
+                    app:layout_constraintHorizontal_bias="0.0"
+                    android:textColor="#FFFFFF" android:layout_marginBottom="24dp"
+                    app:layout_constraintBottom_toTopOf="@+id/editTextRgFuncionario"/>
 
             <EditText
                     android:layout_width="0dp"
                     android:layout_height="67dp"
-                    android:inputType="textPersonName"
+                    android:inputType="number"
                     android:hint="@string/rg"
                     android:textColorHint="@color/colorWhite"
                     android:ems="10"
                     app:layout_constraintStart_toStartOf="parent"
                     android:layout_marginStart="8dp"
-                    android:id="@+id/editTextRgFuncUp" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0" android:textColor="#FFFFFF"
-                    android:layout_marginBottom="24dp"
-                    app:layout_constraintBottom_toTopOf="@+id/SpinnerDeptoFuncUp"/>
+                    android:id="@+id/editTextRgFuncionario"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginBottom="24dp" app:layout_constraintBottom_toTopOf="@+id/spinnerFuncionario"/>
 
             <Button
                     android:text="@string/salvar"
@@ -66,16 +73,17 @@
                     android:layout_height="51dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    android:id="@+id/buttonAtualizarFunc"
+                    android:id="@+id/buttonSalvarFuncionario"
                     android:background="@drawable/button_customized_depto"
                     app:layout_constraintHorizontal_bias="0.552"
                     android:textColor="#FFFFFF"
-                    android:textAllCaps="false" app:layout_constraintBottom_toTopOf="@+id/buttonDeletarFunc"
-                    android:layout_marginBottom="28dp"/>
+                    android:textAllCaps="false"
+                    android:layout_marginBottom="40dp"
+                    app:layout_constraintBottom_toTopOf="@+id/butonCancelarFuncionario"/>
 
 
             <Spinner
-                    android:id="@+id/SpinnerDeptoFuncUp"
+                    android:id="@+id/spinnerFuncionario"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_marginStart="8dp"
@@ -85,9 +93,9 @@
                     android:textAlignment="center"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    android:layout_marginBottom="60dp"
-                    app:layout_constraintBottom_toTopOf="@+id/buttonAtualizarFunc"/>
+                    app:layout_constraintHorizontal_bias="0.0"
+                    android:layout_marginBottom="48dp"
+                    app:layout_constraintBottom_toTopOf="@+id/buttonSalvarFuncionario"/>
             <Button
                     android:text="@android:string/cancel"
                     android:layout_width="192dp"
@@ -97,7 +105,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     android:textColor="@color/colorWhite"
                     android:background="@drawable/button_customized_depto"
-                    android:id="@+id/buttonDeletarFunc"
+                    android:id="@+id/butonCancelarFuncionario"
                     android:layout_marginBottom="44dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintHorizontal_bias="0.552"/>

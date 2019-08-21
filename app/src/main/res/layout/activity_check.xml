@@ -20,7 +20,7 @@
             app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-            android:id="@+id/button_dialog_error"
+            android:id="@+id/buttonDialogConfirm"
             android:layout_width="222dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="11dp"
@@ -46,7 +46,7 @@
             android:textAlignment="center"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/button_dialog_error"
+            app:layout_constraintBottom_toTopOf="@+id/buttonDialogConfirm"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/image_view_resource" />

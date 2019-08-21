@@ -23,7 +23,7 @@
                     android:textStyle="bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textViewFuncUp"
+                    android:id="@+id/textViewNovoDepartamento"
                     app:layout_constraintEnd_toEndOf="parent"
                     android:layout_marginEnd="8dp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -31,13 +31,15 @@
                     android:textColor="#FFFFFF"
                     app:layout_constraintTop_toTopOf="parent"
                     android:layout_marginTop="36dp"
-                    android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/editTextNomeDeptoUp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toTopOf="@+id/ediTextNomeDepartamento"
                     app:layout_constraintVertical_bias="0.21"/>
 
             <EditText
+                    android:id="@+id/ediTextNomeDepartamento"
                     android:layout_width="0dp"
                     android:layout_height="67dp"
-                    android:inputType="textPersonName"
+                    android:inputType="textPersonName|textCapSentences"
                     android:hint="@string/nome"
                     android:textColorHint="@color/colorWhite"
                     android:ems="10"
@@ -48,12 +50,14 @@
                     android:layout_marginBottom="60dp"
                     app:layout_constraintHorizontal_bias="0.0"
                     android:textColor="#FFFFFF"
-                    app:layout_constraintBottom_toTopOf="@+id/editTextSiglaDeptoUp" android:id="@+id/editTextNomeDeptoUp"/>
+                    app:layout_constraintBottom_toTopOf="@+id/ediTextSiglaDepartamento"
+            />
 
             <EditText
+                    android:id="@+id/ediTextSiglaDepartamento"
                     android:layout_width="0dp"
                     android:layout_height="67dp"
-                    android:inputType="textPersonName"
+                    android:inputType="textPersonName|textCapSentences"
                     android:hint="@string/sigla"
                     android:textColorHint="@color/colorWhite"
                     android:ems="10"
@@ -64,8 +68,8 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     android:textColor="#FFFFFF"
                     android:layout_marginBottom="60dp"
-                    app:layout_constraintBottom_toTopOf="@+id/buttonAtualizarDepto"
-                    android:id="@+id/editTextSiglaDeptoUp"/>
+                    app:layout_constraintBottom_toTopOf="@+id/buttonSalvarDepartamento"
+            />
 
             <Button
                     android:text="@string/salvar"
@@ -73,11 +77,12 @@
                     android:layout_height="51dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    android:id="@+id/buttonAtualizarDepto"
+                    android:id="@+id/buttonSalvarDepartamento"
                     android:background="@drawable/button_customized_depto"
                     app:layout_constraintHorizontal_bias="0.497"
                     android:textColor="#FFFFFF"
-                    android:textAllCaps="false" app:layout_constraintBottom_toTopOf="@+id/buttonExcluirDepto"
+                    android:textAllCaps="false"
+                    app:layout_constraintBottom_toTopOf="@+id/buttonCancelarDepartamento"
                     android:layout_marginBottom="28dp"/>
 
             <Button
@@ -86,7 +91,7 @@
                     android:layout_height="51dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    android:id="@+id/buttonExcluirDepto"
+                    android:id="@+id/buttonCancelarDepartamento"
                     android:background="@drawable/button_customized_depto"
                     android:layout_marginBottom="96dp"
                     app:layout_constraintBottom_toBottomOf="parent"

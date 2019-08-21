@@ -58,8 +58,8 @@
     </android.support.constraint.ConstraintLayout>
 
     <android.support.v7.widget.RecyclerView
-            android:layout_width="376dp"
-            android:layout_height="391dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:id="@+id/recyclerViewFunc"
             tools:listitem="@layout/activity_adapter_func"
             app:layout_constraintEnd_toEndOf="parent"

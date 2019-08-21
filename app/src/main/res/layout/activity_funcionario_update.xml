@@ -23,45 +23,52 @@
                     android:textStyle="bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textViewFuncUp"
+                    android:id="@+id/textViewAtualizarFuncionario"
                     app:layout_constraintEnd_toEndOf="parent"
                     android:layout_marginEnd="8dp"
                     app:layout_constraintStart_toStartOf="parent"
                     android:layout_marginStart="8dp"
                     android:textColor="#FFFFFF"
                     app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginTop="36dp" android:layout_marginBottom="8dp"
-                    app:layout_constraintBottom_toTopOf="@+id/editTextNomeFuncUp" app:layout_constraintVertical_bias="0.009"
+                    android:layout_marginTop="36dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toTopOf="@+id/TexViewNomeFuncionarioUpdate"
+                    app:layout_constraintVertical_bias="0.009"
                     app:layout_constraintHorizontal_bias="0.51"/>
 
             <EditText
                     android:layout_width="0dp"
                     android:layout_height="67dp"
-                    android:inputType="textPersonName"
+                    android:inputType="textPersonName|textCapSentences"
                     android:hint="@string/nome"
                     android:textColorHint="@color/colorWhite"
                     android:ems="10"
                     app:layout_constraintStart_toStartOf="parent"
                     android:layout_marginStart="8dp"
-                    android:id="@+id/editTextNomeFuncUp" app:layout_constraintEnd_toEndOf="parent"
+                    android:id="@+id/TexViewNomeFuncionarioUpdate"
+                    app:layout_constraintEnd_toEndOf="parent"
                     android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="24dp" app:layout_constraintBottom_toTopOf="@+id/editTextRgFuncUp"
-                    app:layout_constraintHorizontal_bias="1.0" android:textColor="#FFFFFF"/>
+                    android:layout_marginBottom="24dp"
+                    app:layout_constraintBottom_toTopOf="@+id/editTetxtRgFuncionarioUpdate"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    android:textColor="#FFFFFF"/>
 
             <EditText
                     android:layout_width="0dp"
                     android:layout_height="67dp"
-                    android:inputType="textPersonName"
+                    android:inputType="number"
                     android:hint="@string/rg"
                     android:textColorHint="@color/colorWhite"
                     android:ems="10"
                     app:layout_constraintStart_toStartOf="parent"
                     android:layout_marginStart="8dp"
-                    android:id="@+id/editTextRgFuncUp" android:layout_marginEnd="8dp"
+                    android:id="@+id/editTetxtRgFuncionarioUpdate"
+                    android:layout_marginEnd="8dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0" android:textColor="#FFFFFF"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    android:textColor="#FFFFFF"
                     android:layout_marginBottom="24dp"
-                    app:layout_constraintBottom_toTopOf="@+id/SpinnerDeptoFuncUp"/>
+                    app:layout_constraintBottom_toTopOf="@+id/spinnerFuncionarioUpdate"/>
 
             <Button
                     android:text="@string/atualizar"
@@ -69,16 +76,17 @@
                     android:layout_height="51dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    android:id="@+id/buttonAtualizarFunc"
+                    android:id="@+id/buttonUpdateFuncionario"
                     android:background="@drawable/button_customized_depto"
                     app:layout_constraintHorizontal_bias="0.552"
                     android:textColor="#FFFFFF"
-                    android:textAllCaps="false" app:layout_constraintBottom_toTopOf="@+id/buttonDeletarFunc"
+                    android:textAllCaps="false"
+                    app:layout_constraintBottom_toTopOf="@+id/buttonDeletarFuncionario"
                     android:layout_marginBottom="28dp"/>
 
 
             <Spinner
-                    android:id="@+id/SpinnerDeptoFuncUp"
+                    android:id="@+id/spinnerFuncionarioUpdate"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_marginStart="8dp"
@@ -90,7 +98,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintHorizontal_bias="1.0"
                     android:layout_marginBottom="60dp"
-                    app:layout_constraintBottom_toTopOf="@+id/buttonAtualizarFunc"/>
+                    app:layout_constraintBottom_toTopOf="@+id/buttonUpdateFuncionario"/>
             <Button
                     android:text="@string/deletar"
                     android:layout_width="192dp"
@@ -100,7 +108,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     android:textColor="@color/colorWhite"
                     android:background="@drawable/button_customized_depto"
-                    android:id="@+id/buttonDeletarFunc"
+                   android:id="@+id/buttonDeletarFuncionario"
                     android:layout_marginBottom="36dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintHorizontal_bias="0.552"/>

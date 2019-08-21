@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">AppEvo</string>
     <string name="title_home">Home</string>
+    <string name="selected_item">Selected item:</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 
@@ -32,6 +33,6 @@
     <string name="rg_funcionario">Rg funcionario</string>
     <string name="departamento">Departamento</string>
     <string name="cadastro_de_novos_funcion_rios">Cadastro de novos Funcionários</string>
-
+    <string name="tem_certeza_que_deseja_excluir">Tem certeza que deseja excluir?</string>
 
 </resources>

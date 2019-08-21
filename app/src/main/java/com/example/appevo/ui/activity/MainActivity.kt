@@ -30,7 +30,6 @@ class MainActivity : AppCompatActivity() {
             R.id.nav_funcionario -> {
 
                 val fragment = FuncionarioFragment()
-                //fragment.arguments = intent.extras
                 val transaction = supportFragmentManager.beginTransaction()
                 transaction.replace(R.id.frameLayout,fragment)
                 transaction.commit()
@@ -51,12 +50,10 @@ class MainActivity : AppCompatActivity() {
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
         val fragment = DeptoFragment()
-        //fragment.arguments = intent.extras
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.frameLayout,fragment)
         transaction.commit()
 
-//        //textMessage = findViewById(R.id.message)
         navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
 
     }

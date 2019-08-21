@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import com.example.appevo.R
 import com.example.appevo.model.Funcionario
 import kotlinx.android.synthetic.main.activity_adapter_func.view.*
-import kotlinx.android.synthetic.main.activity_funcionario_input.view.*
 
 class AdapterFunc(
     private val listFunc: List<Funcionario>,
@@ -30,8 +29,8 @@ class AdapterFunc(
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        val nomeFunc = itemView.editTextNomeFuncUp
-        val rgFunc = itemView.editTextRgFuncUp
+        val nomeFunc = itemView.textViewNomeAdapterFunc
+        val rgFunc = itemView.textViewRgAdapterFunc
         val deptoFunc = itemView.textViewDeptoAdapter
 
         fun bind (funcionario: Funcionario){
@@ -39,5 +38,9 @@ class AdapterFunc(
             rgFunc.setText(funcionario.rg)
             //deptoFunc.text = funcionario.departamento.toString()
         }
+    }
+
+    interface RecyclerViewClickListener {
+        fun onClick(view: View, position: Int)
     }
 }

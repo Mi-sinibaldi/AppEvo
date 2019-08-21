@@ -1,7 +1,5 @@
 package com.example.appevo.infra.dao
 
-
-
 import android.arch.persistence.room.*
 import com.example.appevo.model.Departamento
 
@@ -9,7 +7,10 @@ import com.example.appevo.model.Departamento
 interface DepartamentoDao {
 
     @Query("SELECT * FROM departamento")
-     fun getAll(): List<Departamento>
+    fun getAll(): List<Departamento>
+
+    @Query("SELECT * FROM departamento where Id = :idDepartamento")
+    fun getById(idDepartamento :  Int): Departamento
 
     @Insert
      fun insert(departamento: Departamento)

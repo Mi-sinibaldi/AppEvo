@@ -55,21 +55,25 @@
                 android:layout_width="290dp"
                 android:textAllCaps="false"
                 android:layout_height="46dp"
-                android:id="@+id/buttonAddFunc" app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/buttonAddDepartamento"
+                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginEnd="8dp"
-                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-                android:textColor="#FFFFFF" app:layout_constraintHorizontal_bias="0.495"
-                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="16dp"/>
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                android:textColor="#FFFFFF"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="16dp"/>
 
     </android.support.constraint.ConstraintLayout>
 
     <android.support.v7.widget.RecyclerView
             android:layout_width="0dp"
-            android:layout_height="391dp"
-            tools:listitem="@layout/activity_adapter_depto2"
+            android:layout_height="0dp"
+            tools:listitem="@layout/activity_adapter_depto"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:id="@+id/recyclerViewFunc"
+            android:id="@+id/recyclerViewDepartamento"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout"

@@ -11,6 +11,8 @@ class Funcionario(
     var idFunc: Int = 0,
 
     var nomeFunc: String,
-    var rg: String
-    //val departamento: Departamento
+    var rg: String,
+    var departamentoId: Int,
+var deparamentoNome : String
+
 )

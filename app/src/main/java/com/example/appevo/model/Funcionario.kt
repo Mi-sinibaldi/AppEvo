@@ -13,6 +13,6 @@ class Funcionario(
     var nomeFunc: String,
     var rg: String,
     var departamentoId: Int,
-var deparamentoNome : String
+    var deparamentoNome: String
 
 )

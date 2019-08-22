@@ -1,22 +1,19 @@
 package com.example.appevo.ui.adapters
 
-import android.arch.persistence.room.Room
 import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.appevo.R
-import com.example.appevo.infra.AppDatabase
-import com.example.appevo.infra.dao.DepartamentoDao
-import com.example.appevo.model.Departamento
 import com.example.appevo.model.Funcionario
 import kotlinx.android.synthetic.main.activity_adapter_func.view.*
 
 class AdapterFunc(
     private val listFunc: List<Funcionario>,
 
-    private val context: Context) : RecyclerView.Adapter<AdapterFunc.ViewHolder>() {
+    private val context: Context
+) : RecyclerView.Adapter<AdapterFunc.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, p1: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.activity_adapter_func, parent, false)
@@ -33,14 +30,14 @@ class AdapterFunc(
         p0.bind(func)
     }
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView ) {
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
 
         val nomeFunc = itemView.textViewNomeAdapterFunc
         val rgFunc = itemView.textViewRgAdapterFunc
         val deptoFunc = itemView.textViewDeptoAdapter
 
-        fun bind (funcionario: Funcionario){
+        fun bind(funcionario: Funcionario) {
             nomeFunc.setText(funcionario.nomeFunc)
             rgFunc.setText(funcionario.rg)
             deptoFunc.setText(funcionario.deparamentoNome)

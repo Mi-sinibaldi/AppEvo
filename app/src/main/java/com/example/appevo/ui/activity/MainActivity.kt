@@ -10,7 +10,6 @@ import android.widget.Button
 import com.example.appevo.R
 import com.example.appevo.ui.fragments.DeptoFragment
 import com.example.appevo.ui.fragments.FuncionarioFragment
-import kotlinx.android.synthetic.main.activity_chooser_sair.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -23,7 +22,7 @@ class MainActivity : AppCompatActivity() {
                 val fragment = DeptoFragment()
                 //fragment.arguments = intent.extras
                 val transaction = supportFragmentManager.beginTransaction()
-                transaction.replace(R.id.frameLayout,fragment)
+                transaction.replace(R.id.frameLayout, fragment)
                 transaction.commit()
                 return@OnNavigationItemSelectedListener true
             }
@@ -31,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
                 val fragment = FuncionarioFragment()
                 val transaction = supportFragmentManager.beginTransaction()
-                transaction.replace(R.id.frameLayout,fragment)
+                transaction.replace(R.id.frameLayout, fragment)
                 transaction.commit()
                 return@OnNavigationItemSelectedListener true
             }
@@ -51,7 +50,7 @@ class MainActivity : AppCompatActivity() {
 
         val fragment = DeptoFragment()
         val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.frameLayout,fragment)
+        transaction.replace(R.id.frameLayout, fragment)
         transaction.commit()
 
         navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)

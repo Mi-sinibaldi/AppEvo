@@ -76,6 +76,4 @@ class DepartamentoInputActivity : AppCompatActivity() {
             finish()
         })
     }
-
-
 }

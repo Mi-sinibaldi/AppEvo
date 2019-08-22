@@ -10,11 +10,13 @@ import kotlinx.android.synthetic.main.activity_adapter_depto.view.*
 
 class AdapterDepto(
     private val deptoList: List<Departamento>,
-    private val context: Context) : RecyclerView.Adapter<AdapterDepto.ViewHolder>() {
+    private val context: Context
+) : RecyclerView.Adapter<AdapterDepto.ViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(context).inflate(com.example.appevo.R.layout.activity_adapter_depto, parent, false)
+        val view =
+            LayoutInflater.from(context).inflate(com.example.appevo.R.layout.activity_adapter_depto, parent, false)
         return ViewHolder(view)
     }
 
@@ -41,6 +43,4 @@ class AdapterDepto(
     interface RecyclerViewClickListener {
         fun onClick(view: View, position: Int)
     }
-
-
 }
